@@ -4,6 +4,13 @@ main = "src/index.ts"
 compatibility_date = "2024-04-05"
 compatibility_flags = ["nodejs_compat"]
 
+
+[[d1_databases]]
+binding = "worker" # i.e. available in your Worker on env.DB
+database_name = "christian-at-tech"
+database_id = "3ec2a4e0-2829-4f28-84ea-36d577b5fa3c"
+
+
 # Variable bindings. These are arbitrary, plaintext strings (similar to environment variables)
 # Note: Use secrets to store sensitive data.
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
@@ -27,10 +34,10 @@ compatibility_flags = ["nodejs_compat"]
 
 # Bind a D1 database. D1 is Cloudflare’s native serverless SQL database.
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#d1-databases
-[[d1_databases]]
-binding = "MY_DB"
-database_name = "christian-at-tech"
-database_id = "d1fb0e31-277b-481c-985c-8ab5d1447465"
+# [[d1_databases]]
+# binding = ""
+# database_name = "christian-at-tech"
+# database_id = "d1fb0e31-277b-481c-985c-8ab5d1447465"
 
 # Bind a dispatch namespace. Use Workers for Platforms to deploy serverless functions programmatically on behalf of your customers.
 # Docs: https://developers.cloudflare.com/workers/wrangler/configuration/#dispatch-namespace-bindings-workers-for-platforms
